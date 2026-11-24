@@ -8,7 +8,7 @@
 - Ghi nhận giới hạn giao diện: trang kết quả có class Font Awesome nhưng không tải thư viện tương ứng nên biểu tượng không hiển thị; không sửa code ngoài phạm vi tài liệu/minh chứng.
 - Ảnh chụp được xuất từ phiên trình duyệt cô lập. Do giới hạn raster đầu ra của browser, các ảnh PNG được chuẩn hóa kích thước đầu ra về viewport kiểm thử; nội dung không được ghép/chỉnh sửa. Chi tiết ở [evidence index](./docs/evidence-index.md).
 - Chưa kiểm tra trực tiếp trên iPhone vật lý. Screenshot trang không chứa thanh địa chỉ browser; URL GET được xác nhận từ URL mà Playwright đọc được, xem ghi chú ở evidence index.
-- **Trạng thái phát hành:** các thay đổi v3 hiện ở working tree; chưa có commit/tag v3. Commit mới nhất trước lần cập nhật này là `bf57a4c` (tag `v2`).
+- **Trạng thái phát hành:** commit [`8a89bf6`](https://github.com/duy200779/mld-game-store/commit/8a89bf6145cb78f6c45cd5430422c9f6dd7dcfeb) đã được đẩy lên nhánh `main` và gắn tag [`v3`](https://github.com/duy200779/mld-game-store/tree/v3). Remote `main` và `v3` cùng trỏ tới commit này.
 
 ## v2 (24/11/2026) – Cập nhật tài liệu và ảnh minh họa
 

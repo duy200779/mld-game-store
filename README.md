@@ -52,6 +52,7 @@ Website không cần cài thư viện hay build. Chỉ dùng dữ liệu giả k
 │       └── banner-shop.jpg
 └── docs/
     ├── AI_LOG.md
+    ├── BAO_CAO_A3_FIT4014.md
     ├── evidence-index.md
     └── evidence/
         ├── 01-desktop-1440px.png
@@ -65,7 +66,8 @@ Website không cần cài thư viện hay build. Chỉ dùng dữ liệu giả k
 
 - Mã nguồn ở nhánh `main`; thông tin cấu hình bàn giao là GitHub Pages từ nhánh `main`, thư mục gốc `/`.
 - Nguồn demo: [GitHub Pages](https://duy200779.github.io/mld-game-store/).
-- Tài liệu v3 ở working tree chưa được đẩy lên GitHub; nội dung public sẽ cập nhật sau khi commit/push và GitHub Pages triển khai lại.
+- Tag [`v3`](https://github.com/duy200779/mld-game-store/tree/v3) đã được đẩy lên GitHub tại commit `8a89bf6`; nhánh `main` cũng trỏ tới commit này. Commit v3 chuẩn hóa tài liệu và thêm ảnh minh chứng, không sửa HTML/CSS ứng dụng.
+- Xem [báo cáo A3/FIT4014](./docs/BAO_CAO_A3_FIT4014.md) để đọc mô tả thiết kế, kiểm thử và bàn giao. Cấu hình Pages trong GitHub Settings chưa được xác minh độc lập.
 - Nguồn ảnh theo thông tin được cung cấp cho dự án: banner từ Pexels; ảnh game từ tài nguyên truyền thông của Garena, Riot Games và HoYoverse, được lưu trong `assets/images/`. Repository không lưu URL ảnh gốc, tên tác giả hay giấy phép cụ thể; cần bổ sung/đối chiếu các thông tin đó trước khi tái sử dụng hoặc phát hành ngoài phạm vi bài tập.
 - Tên tài khoản, giá và mô tả trong các thẻ là dữ liệu giả lập phục vụ đồ án.
 

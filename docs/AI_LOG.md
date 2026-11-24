@@ -5,9 +5,11 @@
 
 Nhật ký này ghi lại các quyết định trong lần chuẩn hóa v3. Lịch sử Git trước đó chỉ có thông điệp commit chung, không có prompt hay biên bản các lượt AI cũ; vì vậy em không hồi dựng những trao đổi hoặc suy nghĩ trước đây. Mã HTML/CSS sản phẩm được giữ nguyên.
 
+**Trạng thái bàn giao hiện tại:** tag `v3` đã được tạo và đẩy lên remote tại commit `8a89bf6145cb78f6c45cd5430422c9f6dd7dcfeb`. Một số nhận định dưới đây ghi rõ trạng thái tại thời điểm bắt đầu chuẩn hóa, trước khi commit/tag v3 được tạo.
+
 | Ngày | Dùng AI làm gì | Em quyết định/sửa lại gì |
 |---|---|---|
-| 24/11/2026 | Hỗ trợ rà soát cây thư mục, mã nguồn, Git và điều kiện kiểm thử. | Chỉ ghi điều xác nhận được; phân biệt tag v2 hiện có với v3 chưa commit/tag. |
+| 24/11/2026 | Hỗ trợ rà soát cây thư mục, mã nguồn, Git và điều kiện kiểm thử. | Tại thời điểm rà soát ban đầu, chỉ xác nhận v1/v2; không suy diễn rằng v3 đã được phát hành. |
 | 24/11/2026 | Hỗ trợ chạy kiểm thử browser ở viewport giả lập và chụp ảnh. | Đối chiếu kết quả đo được; ghi rõ ảnh không có browser chrome và chưa thử iPhone vật lý. |
 | 24/11/2026 | Hỗ trợ chuẩn hóa README, CHANGELOG, evidence index và nhật ký AI. | Chỉ thay tài liệu/ảnh minh chứng; không sửa HTML/CSS và không khẳng định nguồn ảnh chưa kiểm chứng độc lập. |
 
@@ -39,7 +41,7 @@ Nhật ký này ghi lại các quyết định trong lần chuẩn hóa v3. Lị
 4. **Gợi ý từ AI:** thay release notes bằng changelog; dùng liên kết tương đối tới evidence; ghi riêng giới hạn form tĩnh, nguồn ảnh chưa xác minh và trạng thái phát hành chưa commit.
 5. **Quyết định có lý do của em:** áp dụng cách tổ chức `docs/`; chỉ nêu nguồn ảnh theo thông tin đã cung cấp và đánh dấu URL/giấy phép cụ thể chưa lưu trong repository.
 6. **Phần đã sửa trong mã nguồn:** không thay đổi giao diện hay hành vi HTML/CSS; cập nhật README, CHANGELOG, AI_LOG và evidence index.
-7. **Cách thử lại và kết quả thực tế:** đã kiểm tra các liên kết tương đối và sự tồn tại của năm ảnh sau khi lưu. Cấu hình nhánh/thư mục trong Settings → Pages và hiển thị trên iPhone vật lý **Chưa kiểm tra**. Tag v3 **Chưa tạo**; trạng thái này được ghi trong CHANGELOG.
+7. **Cách thử lại và kết quả thực tế:** đã kiểm tra các liên kết tương đối và sự tồn tại của năm ảnh sau khi lưu. Cấu hình nhánh/thư mục trong Settings → Pages và hiển thị trên iPhone vật lý **Chưa kiểm tra**. Tại thời điểm hoàn tất phần nội dung ban đầu, tag v3 chưa được tạo; sau đó hồ sơ và ảnh đã được commit, tag `v3` trỏ tới `8a89bf6`.
 
 ## Minh chứng
 
