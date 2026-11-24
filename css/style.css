@@ -1,0 +1,478 @@
+/* 1. Design Tokens & Reset cơ bản */
+:root {
+  --bg-page: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-alt: #162033;
+  --border-color: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+  --primary: #38bdf8;
+  --primary-hover: #0ea5e9;
+  --primary-text: #0f172a;
+  --accent: #f59e0b;
+  --focus-ring: #fbbf24;
+  --error: #b91c1c;
+  --radius: 0.75rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--primary);
+}
+
+/* 2. Container co giãn (Mobile-first từ 320px) */
+.container {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* 3. Header & Menu Flexbox (tự xuống dòng khi hẹp) */
+.site-header {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  padding-block: 1rem;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.site-nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.site-nav a:hover {
+  background-color: var(--border-color);
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* 4. Trạng thái Focus rõ ràng cho điều hướng bàn phím */
+.brand:focus-visible,
+.site-nav a:focus-visible,
+.button:focus-visible,
+.card-link:focus-visible,
+.contact-list a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* 5. Nút bấm & các trạng thái tương tác */
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.button-primary {
+  background-color: var(--primary);
+  color: var(--primary-text);
+}
+
+.button-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--text-main);
+  border-color: var(--primary);
+}
+
+.button-secondary:hover {
+  background-color: var(--bg-surface);
+  color: var(--primary);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:disabled,
+.button-disabled {
+  background-color: #475569;
+  color: #cbd5e1;
+  border-color: #64748b;
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+/* 6. Hero (Mobile-first: xếp 1 cột) */
+.hero {
+  padding-block: 2.5rem;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-text h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+.hero-text p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-media {
+  margin: 0;
+}
+
+.hero-media img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+}
+
+.hero-media figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* 7. Các Section nội dung */
+.section {
+  padding-block: 2.5rem;
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.section-lead {
+  color: var(--text-muted);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* 8. Danh sách Acc Game - Grid 1 cột cơ sở */
+.acc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.acc-card {
+  min-width: 0;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.acc-card:hover,
+.acc-card:focus-within {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+/* Đặt overflow: hidden ở khung ảnh thay vì cả card để không cắt outline focus */
+.card-media {
+  overflow: hidden;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.card-media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+.acc-code {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.card-body h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.card-body ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+}
+
+.card-body li {
+  margin-bottom: 0.35rem;
+}
+
+.card-link {
+  margin-top: auto;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 180ms ease;
+}
+
+.card-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* 9. Bảng bảo hành (chống tràn ngang ở 320px) */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-surface);
+  min-width: 34rem;
+}
+
+th,
+td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+thead th {
+  background-color: #0b1220;
+  color: var(--primary);
+}
+
+/* 10. Quy trình giao dịch */
+.process-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.process-list li {
+  color: var(--text-muted);
+}
+
+.process-list strong {
+  color: var(--text-main);
+}
+
+/* 11. Khu vực Liên hệ & Form HTML5 */
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.contact-list {
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+}
+
+.contact-list li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-list a {
+  overflow-wrap: anywhere;
+}
+
+.order-form {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Chỉ báo lỗi sau khi người dùng đã tương tác hoặc bấm gửi */
+input:user-invalid,
+textarea:user-invalid {
+  border-color: var(--error);
+}
+
+.help {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* 12. Trang kết quả mô phỏng & Footer */
+.result-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2rem;
+  max-width: 44rem;
+}
+
+.result-note {
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  background-color: var(--bg-page);
+  color: var(--text-muted);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border-color);
+  padding-block: 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-inner p {
+  margin: 0.25rem 0;
+}
+
+/* 13. Responsive Breakpoints tính theo kích thước nội dung */
+/* B1 = 640px: card tối thiểu 280px -> 2*280 + 24(gap) + 2*24(padding) = 632px -> chọn 640px */
+@media (min-width: 640px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.15rem;
+  }
+
+  .acc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* B2 = 960px: card tối thiểu 280px -> 3*280 + 2*24(gap) + 2*24(padding) = 936px -> chọn 960px */
+@media (min-width: 960px) {
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-media {
+    flex: 1;
+  }
+
+  .acc-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    align-items: start;
+  }
+}
