@@ -1,7 +1,7 @@
 # MLD Game Store
 
 **Tác giả:** Mai Lâm Duy — MSV 2071020214 — Lớp CNTT 20-04 — Khoa CNTT, Trường Đại học Đại Nam
-**Học phần:** Bài tập lớn A3 / Lab 8 — FIT4014
+**Học phần:** Bài tập lớn A3
 
 ## Sản phẩm
 
